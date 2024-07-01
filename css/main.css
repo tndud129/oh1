@@ -3,7 +3,7 @@ html, body{height: 100%;}
 
 #wrap{height: 100%;}
 body{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 header{
@@ -18,6 +18,7 @@ header{
     width: 1100px;
     height: 150px;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo{
@@ -35,7 +36,7 @@ header{
 
 .menu_bg{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-color: rgba(255, 255, 255, 0.213);
 }
 
@@ -53,9 +54,10 @@ header{
     /* border: 1px solid black; */
     margin-left: 55px;
     position: relative;
+    height: 100%;
 }
 
-.nav_menu>li:hover a{
+.nav_menu>li:hover{
     border-bottom: 3px solid #D04848;
     color: gray;
 }
@@ -63,9 +65,9 @@ header{
 .nav_menu>li>a{
     display: block;
     width: 150px;
-    height: 150px;
+    /* height: 150px; */
     text-align: center;
-    line-height: 150px;
+    line-height: 147px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -78,24 +80,38 @@ header{
     width: 100%;
     left: 0;
     top: 150px;
+    z-index: 6;
 }
 .sub li{}
 .sub li a{
     display: block;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     color: #D04848;
+    font-size: 20px;
+    font-weight: bold;
     /* background-color: orangered; */
 }
 
 .sub li:hover a{
-    color: gray;
+    color: black;
+}
+
+.sub_bg{
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 150px;
+    z-index: 5;
+    /* display: none; */
 }
 
 
 .slide{
-    height: 800px;
     width: 100%;
+    height: 800px;
 }
 
 .slide>div{}
@@ -109,14 +125,16 @@ header{
 main{
     width: 1100px;
     height: 100%;
-    margin: 0 auto;
+    margin:0 auto;
 }
+
+
 .banner{
     position: absolute;
     width: 301px;
-    height: 600px;
-    background-color: #729762;
-    left: 0;
+    height: 100%;
+    border-right: 1px solid gray;
+    left: 103px;
     top: 950px;
 }
 /* .banner img{display: block;} */
@@ -124,25 +142,24 @@ main{
 
 
 .doctor{
-    float: left;
-    width: 1619px;
     height: 600px;
-    padding: 50px 100px;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 
 
 .d_i1{
-    display: inline-block;
-    width: 600px;
+    float: left;
+    width: 500px;
     height: 500px;
-    background: #D04848;
+    /* background: #D04848; */
 }
 
 .d_i1>a{}
 .d_i1>a>img{
-    width: 600px;
+    width: 500px;
     height: 500px;
     object-fit: cover;
     opacity: 0.5;
@@ -153,17 +170,17 @@ main{
 .d_i1>p{
     font-size: 20px;
     font-weight: bold;
-    margin: 20px 250px;
+    margin: 20px 230px;
     width: 100px;
     /* background-color: lightcyan; */
 }
 
 
 .d_i2{
-    display: inline-block;
+    float: right;
     width: 500px;
     height: 500px;
-    background: #ffa8a8;
+    /* background: #ffa8a8; */
 }
 
 .d_i2>a{}
@@ -186,72 +203,172 @@ main{
 
 
 .box{
-    background-color: navajowhite;
-    height: 500px;
+    width: 100%;
+    height: 530px;
+    /* background-color: aqua; */
+    position: relative;
+}
+.box>ul{
+    display: flex;
+    /* border: #D04848 1px solid; */
+    height: 530px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+.box>ul>li{
+    width: 480px;
+    height: 250px;
+    overflow: hidden;
+    
+}
+.box>ul>li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.box>ul>li>a>img{
+    width: 100%;
 }
 
-.box1{
+
+.b_text{
     width: 300px;
     height: 150px;
-}
-
-.box1>a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: black 1px solid;
-}
-.box1>a>img{}
-
-.box2{
-    width: 200px;
-    height: 150px;
-}
-
-.box2>a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: black 1px solid;
-}
-.box2>a>img{}
-
-.box3{
-    width: 200px;
-    height: 150px;
-}
-
-.box3>a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: black 1px solid;
-}
-.box3>a>img{}
-
-
-.box4{
-    width: 200px;
-    height: 150px;
-}
-
-.box4>a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: black 1px solid;
-}
-.box4>a>img{}
-
-.box_i{
+    position: absolute;
+    transition: all 0.7s;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 150px;
     text-align: center;
-    line-height: 100px;
-    width: 200px;
-    height: 100px;
-    background-color: white;
+    font-size: 20px;
 }
-.box_i h3{}
-.box_i h3:hover{color: #D04848;}
+.b_text h2{}
+
+.box>ul>li>a:hover .b_text{
+    background-color: white;
+    font-size: 20px;
+    top: 50%;
+}
+
+
+.photos{
+    width: 100%;
+    height: 600px;
+    /* background: #D04848; */
+    padding: 40px;
+}
+
+
+.photos h4{
+    font-size: 35px;
+    text-align: center;
+}
+
+.photos h6{
+    font-size: 20px;
+    margin: 10px 0 50px;
+    text-align: center;
+}
+
+.photos_i{
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.photos_i li{
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.photos_i li a{
+    display: block;
+}
+
+.photos_i li a img{}
+
+
+.map{
+    width: 100%;
+    height: 460px;
+    background-color: bisque;
+}
+
+.map h6{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.map_i{
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 430px;
+    margin-bottom: 40px;
+}
+
+.map_t{
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.map_t_2{
+    display: inline-block;
+    line-height: 1.5;
+    margin-left: 570px;
+}
+
+.map_t1{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* footer영역 */
+.footer{
+    float: left;
+    width: 100%;
+    height: 210px;
+    border-top: 1px solid gray;
+    padding: 50px 0;
+    margin-top: 100px;
+}
+
+.f_inner{}
+
+.f_inner1{
+    display: inline-block;
+    line-height: 1.3;
+    margin: ;
+    border: 1px solid red;
+}
+
+.f_inner2{
+    display: inline-block;
+    margin:;
+    border: 1px red solid;
+}
+
+.f_inner3{
+    display: inline-block;
+    border: 1px red solid;
+
+}
+
+.f_text{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.f_s{}
+
+
