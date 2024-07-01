@@ -2,6 +2,9 @@
 html, body{height: 100%;}
 
 #wrap{height: 100%;}
+body{
+    overflow-x: hidden;
+}
 
 header{
     width: 100%;
@@ -106,12 +109,15 @@ header{
 main{
     width: 1100px;
     height: 100%;
+    margin: 0 auto;
 }
 .banner{
-    float: left;
+    position: absolute;
     width: 301px;
     height: 600px;
     background-color: #729762;
+    left: 0;
+    top: 950px;
 }
 /* .banner img{display: block;} */
 
@@ -131,7 +137,7 @@ main{
     display: inline-block;
     width: 600px;
     height: 500px;
-    /* background: #D04848; */
+    background: #D04848;
 }
 
 .d_i1>a{}
@@ -155,9 +161,9 @@ main{
 
 .d_i2{
     display: inline-block;
-    width: 600px;
+    width: 500px;
     height: 500px;
-    /* background: #ffa8a8; */
+    background: #ffa8a8;
 }
 
 .d_i2>a{}
